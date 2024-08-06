@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta de Endereço</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Consulta de CEP</h1>
+        <form id="cep-form">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+
+            <label for="cep">CEP:</label>
+            <input type="text" id="cep" name="cep" placeholder="XXXXX-XXX" required>
+
+            <label for="complemento">Complemento (opcional):</label>
+            <input type="text" id="complemento" name="complemento">
+
+            <button type="submit">Buscar</button>
+        </form>
+        <p class="cep-instruction">Escreva dessa forma o CEP: <strong>XXXXX-XXX</strong>.</p>
+        
+        <div id="resultado" class="hidden">
+            <h2>Resultado:</h2>
+            <p><strong>Nome:</strong> <span id="resultado-nome"></span></p>
+            <p><strong>Logradouro:</strong> <span id="resultado-logradouro"></span></p>
+            <p><strong>Complemento:</strong> <span id="resultado-complemento"></span></p>
+            <p><strong>Bairro:</strong> <span id="resultado-bairro"></span></p>
+            <p><strong>Cidade:</strong> <span id="resultado-cidade"></span></p>
+            <p><strong>Estado:</strong> <span id="resultado-estado"></span></p>
+            <button id="collapse-button" class="hidden">Recolher</button>
+        </div>
+
+        <div class="more-info">
+            <a href="#" id="toggle-info" class="arrow-link">
+                <img src="https://img.icons8.com/ios-filled/40/000000/long-arrow-down.png" alt="Seta para baixo">
+            </a>
+        </div>
+        <div id="info-section" class="info-section hidden">
+            <h2>Sobre este Projeto</h2>
+            <p>Este projeto foi desenvolvido para ajudar a consultar informações de endereço a partir de um CEP utilizando a API ViaCEP. O objetivo é facilitar o acesso às informações de forma rápida e eficiente.</p>
+            <p>Desenvolvido por <strong>Luiz F.</strong>.</p>
+            <a href="https://github.com/luizwp" class="github-link" target="_blank">
+                <img src="https://img.icons8.com/ios-filled/30/000000/github.png" alt="GitHub"> Visite o GitHub do autor
+            </a>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>

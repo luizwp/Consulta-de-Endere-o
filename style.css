@@ -1,0 +1,200 @@
+/* Reset básico para garantir que o layout fique consistente */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #f7f7f7, #e0e0e0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 0 20px;
+}
+
+.container {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    width: 100%;
+    max-width: 600px;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 2em;
+    font-weight: 700;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+label {
+    font-weight: bold;
+    color: #555;
+}
+
+input[type="text"] {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+}
+
+input[type="text"]:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 4px rgba(0, 123, 255, 0.2);
+}
+
+button {
+    padding: 12px;
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.cep-instruction {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #666;
+    text-align: center;
+}
+
+.cep-instruction strong {
+    font-weight: bold;
+}
+
+#resultado {
+    margin-top: 20px;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#resultado.hidden {
+    display: none;
+}
+
+#resultado h2 {
+    margin-bottom: 15px;
+    color: #333;
+    font-size: 1.5em;
+    font-weight: 600;
+}
+
+#resultado p {
+    margin: 8px 0;
+    font-size: 16px;
+    color: #555;
+}
+
+/* Estilos para a seta e a seção de informações adicionais */
+.more-info {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.arrow-link img {
+    width: 30px; /* Ajustado o tamanho da seta */
+    height: 30px; /* Ajustado o tamanho da seta */
+    transition: transform 0.3s;
+}
+
+.arrow-link img:hover {
+    transform: scale(1.2);
+}
+
+/* Botão Recolher */
+#collapse-button {
+    display: block;
+    margin: 10px auto;
+    padding: 10px 20px;
+    background-color: #ff4d4d; /* Cor para o botão de recolher */
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+#collapse-button:hover {
+    background-color: #e60000;
+    transform: scale(1.05);
+}
+
+/* Seção de informações com animação */
+.info-section {
+    margin-top: 30px;
+    padding: 0 20px; /* Padding inicial para ocultar o conteúdo */
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-height: 0; /* Inicialmente escondido */
+    overflow: hidden; /* Esconde o conteúdo que ultrapassa o max-height */
+    transition: max-height 0.5s ease, padding 0.5s ease; /* Animação de deslizamento e padding */
+}
+
+.info-section.hidden {
+    max-height: 0; /* Esconde a seção */
+    padding: 0 20px; /* Remove o padding para ocultar */
+}
+
+.info-section.visible {
+    max-height: 500px; /* Ajuste conforme necessário para a altura máxima */
+    padding: 20px; /* Restaura o padding quando visível */
+}
+
+.info-section h2 {
+    margin-bottom: 15px;
+    color: #333;
+    font-size: 1.5em;
+}
+
+.info-section p {
+    margin: 10px 0;
+    font-size: 16px;
+    color: #555;
+}
+
+.github-link {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    font-size: 16px;
+    color: #333;
+    text-decoration: none;
+}
+
+.github-link img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    transition: transform 0.3s;
+}
+
+.github-link img:hover {
+    transform: scale(1.1);
+}
